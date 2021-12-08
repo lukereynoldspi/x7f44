@@ -19,5 +19,5 @@ class Box
   def can_flip_for?(value)
     false
   end
-  
+
 end
