@@ -1,21 +1,15 @@
 class Game
 
-  WELCOME_MESSAGE = "Welcome to Shut da Box!"
-  W_M = "You shut da box!"
-
   attr_reader :box, :dice
 
   def initialize(box, dice)
     @box = box
     @dice = dice
+    puts "Welcome to Shut da Box!"
   end
 
   def over?
     box.shut? || box.can_flip_for?(dice.map(&:value).reduce(:+))
-  end
-
-  def start!
-    prepare_next_round
   end
 
   def prepare_next_round
@@ -39,7 +33,7 @@ class Game
   end
 
   def results
-    box.shut? ? W_M : "Game over, you did not shut da box."
+    box.shut? ? "You shut da box!" : "Game over, you did not shut da box."
   end
 
 end
