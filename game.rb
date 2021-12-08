@@ -18,8 +18,8 @@ class Game
 
   def play
     print '| '
-    box.getTiles().each do |tile|
-      print 'Box | '
+    box.tiles.each do |tile|
+      print tile.to_s + ' | '
     end
     print "\n"
     print "You rolled: "

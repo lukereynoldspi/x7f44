@@ -10,6 +10,5 @@ dice = (1..N_DICE).map { |i| Die.new(N_SIDES) }
 box = Box.new(N_TILES)
 game = Game.new(box, dice)
 
-game.prepare_next_round
 game.play until game.over?
 puts game.results
